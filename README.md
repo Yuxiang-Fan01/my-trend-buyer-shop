@@ -1,6 +1,6 @@
 # 我的潮流买手店
 
-一款可交互的纯前端买手店经营游戏 Demo。Next.js App Router + TypeScript + Tailwind CSS，移动端优先，支持静态导出和 Vercel 部署。
+一款可交互的纯前端买手店经营游戏 Demo。Next.js App Router + TypeScript + Tailwind CSS，移动端优先，支持静态导出和 GitHub Pages 部署。
 
 **非官方概念演示，仅用于产品设计交流。** 所有商品、品牌、合作、购买和社区店铺均为模拟。24 张商品图为项目原创 SVG 示意图，随项目提供，无外部图片依赖。没有注册、登录、数据库、真实支付或多人服务。
 
@@ -70,24 +70,13 @@ pnpm start
 
 同一站点、同一浏览器的标签页共享存档；不同浏览器、隐私窗口、不同域名各自独立。清除浏览器站点数据会删除存档。本 Demo 不做跨设备同步或本地防作弊；没有声称是真实多人数据。
 
-## Vercel 部署
+## GitHub Pages 部署
 
-项目已配置 `vercel.json`。不需要环境变量、数据库或任何第三方服务密钥。
+仓库包含 `.github/workflows/deploy-pages.yml`。推送到 `main` 后，GitHub Actions 会使用 Node.js 24 和 pnpm 构建 `out/`，自动加入仓库子路径，并发布到 GitHub Pages。项目不需要环境变量、数据库或第三方服务密钥。
 
-方式一：将本目录作为仓库根目录推送到 GitHub 等 Git 服务，在 Vercel 导入，选择 Next.js，保持输出目录 `out`。如果仓库包含外层文件夹，Root Directory 选择包含 `package.json` 的 `my-trend-buyer-shop` 目录。使用 Node.js 24 LTS。构建命令已配置为 `npm run build`，Vercel 可根据 `pnpm-lock.yaml` 安装依赖。
+仓库第一次部署时，在 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。后续每次推送都会自动更新网站。
 
-方式二：在本目录执行：
-
-```bash
-npx vercel login
-npx vercel
-# 检查预览部署后发布生产环境
-npx vercel --prod
-```
-
-部署时需要你的 Vercel 账户及项目权限。本次交付已完成本地构建和浏览器验收，但没有账户凭据，**尚未创建公网部署，也没有虚构部署链接**。
-
-参考：[Vercel 的 Next.js 部署说明](https://vercel.com/docs/frameworks/full-stack/nextjs)、[Next.js 静态导出](https://nextjs.org/docs/app/guides/static-exports)。
+参考：[GitHub Pages 自定义工作流](https://docs.github.com/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)、[Next.js 静态导出](https://nextjs.org/docs/app/guides/static-exports)。
 
 ## 验证
 
