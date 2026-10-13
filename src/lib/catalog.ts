@@ -1,4 +1,5 @@
 export type Product = { id: string; name: string; brand: string; category: string; style: string; price: number; image: string };
+const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
 export const PRODUCTS: Product[] = [
   {
     "id": "p01",
@@ -7,7 +8,7 @@ export const PRODUCTS: Product[] = [
     "category": "服饰",
     "style": "松弛日常",
     "price": 699,
-    "image": "/products/p01.svg"
+    "image": assetPath("/products/p01.svg")
   },
   {
     "id": "p02",
@@ -16,7 +17,7 @@ export const PRODUCTS: Product[] = [
     "category": "服饰",
     "style": "复古街头",
     "price": 459,
-    "image": "/products/p02.svg"
+    "image": assetPath("/products/p02.svg")
   },
   {
     "id": "p03",
@@ -25,7 +26,7 @@ export const PRODUCTS: Product[] = [
     "category": "服饰",
     "style": "未来机能",
     "price": 899,
-    "image": "/products/p03.svg"
+    "image": assetPath("/products/p03.svg")
   },
   {
     "id": "p04",
@@ -34,7 +35,7 @@ export const PRODUCTS: Product[] = [
     "category": "服饰",
     "style": "松弛日常",
     "price": 529,
-    "image": "/products/p04.svg"
+    "image": assetPath("/products/p04.svg")
   },
   {
     "id": "p05",
@@ -43,7 +44,7 @@ export const PRODUCTS: Product[] = [
     "category": "服饰",
     "style": "复古街头",
     "price": 399,
-    "image": "/products/p05.svg"
+    "image": assetPath("/products/p05.svg")
   },
   {
     "id": "p06",
@@ -52,7 +53,7 @@ export const PRODUCTS: Product[] = [
     "category": "服饰",
     "style": "未来机能",
     "price": 299,
-    "image": "/products/p06.svg"
+    "image": assetPath("/products/p06.svg")
   },
   {
     "id": "p07",
@@ -61,7 +62,7 @@ export const PRODUCTS: Product[] = [
     "category": "球鞋",
     "style": "松弛日常",
     "price": 699,
-    "image": "/products/p07.svg"
+    "image": assetPath("/products/p07.svg")
   },
   {
     "id": "p08",
@@ -70,7 +71,7 @@ export const PRODUCTS: Product[] = [
     "category": "球鞋",
     "style": "复古街头",
     "price": 459,
-    "image": "/products/p08.svg"
+    "image": assetPath("/products/p08.svg")
   },
   {
     "id": "p09",
@@ -79,7 +80,7 @@ export const PRODUCTS: Product[] = [
     "category": "球鞋",
     "style": "未来机能",
     "price": 899,
-    "image": "/products/p09.svg"
+    "image": assetPath("/products/p09.svg")
   },
   {
     "id": "p10",
@@ -88,7 +89,7 @@ export const PRODUCTS: Product[] = [
     "category": "球鞋",
     "style": "松弛日常",
     "price": 529,
-    "image": "/products/p10.svg"
+    "image": assetPath("/products/p10.svg")
   },
   {
     "id": "p11",
@@ -97,7 +98,7 @@ export const PRODUCTS: Product[] = [
     "category": "球鞋",
     "style": "复古街头",
     "price": 399,
-    "image": "/products/p11.svg"
+    "image": assetPath("/products/p11.svg")
   },
   {
     "id": "p12",
@@ -106,7 +107,7 @@ export const PRODUCTS: Product[] = [
     "category": "球鞋",
     "style": "未来机能",
     "price": 299,
-    "image": "/products/p12.svg"
+    "image": assetPath("/products/p12.svg")
   },
   {
     "id": "p13",
@@ -115,7 +116,7 @@ export const PRODUCTS: Product[] = [
     "category": "包袋",
     "style": "松弛日常",
     "price": 699,
-    "image": "/products/p13.svg"
+    "image": assetPath("/products/p13.svg")
   },
   {
     "id": "p14",
@@ -124,7 +125,7 @@ export const PRODUCTS: Product[] = [
     "category": "包袋",
     "style": "复古街头",
     "price": 459,
-    "image": "/products/p14.svg"
+    "image": assetPath("/products/p14.svg")
   },
   {
     "id": "p15",
@@ -133,7 +134,7 @@ export const PRODUCTS: Product[] = [
     "category": "包袋",
     "style": "未来机能",
     "price": 899,
-    "image": "/products/p15.svg"
+    "image": assetPath("/products/p15.svg")
   },
   {
     "id": "p16",
@@ -142,7 +143,7 @@ export const PRODUCTS: Product[] = [
     "category": "包袋",
     "style": "松弛日常",
     "price": 529,
-    "image": "/products/p16.svg"
+    "image": assetPath("/products/p16.svg")
   },
   {
     "id": "p17",
@@ -151,7 +152,7 @@ export const PRODUCTS: Product[] = [
     "category": "包袋",
     "style": "复古街头",
     "price": 399,
-    "image": "/products/p17.svg"
+    "image": assetPath("/products/p17.svg")
   },
   {
     "id": "p18",
@@ -160,7 +161,7 @@ export const PRODUCTS: Product[] = [
     "category": "包袋",
     "style": "未来机能",
     "price": 299,
-    "image": "/products/p18.svg"
+    "image": assetPath("/products/p18.svg")
   },
   {
     "id": "p19",
@@ -169,7 +170,7 @@ export const PRODUCTS: Product[] = [
     "category": "饰品",
     "style": "松弛日常",
     "price": 699,
-    "image": "/products/p19.svg"
+    "image": assetPath("/products/p19.svg")
   },
   {
     "id": "p20",
@@ -178,7 +179,7 @@ export const PRODUCTS: Product[] = [
     "category": "饰品",
     "style": "复古街头",
     "price": 459,
-    "image": "/products/p20.svg"
+    "image": assetPath("/products/p20.svg")
   },
   {
     "id": "p21",
@@ -187,7 +188,7 @@ export const PRODUCTS: Product[] = [
     "category": "饰品",
     "style": "未来机能",
     "price": 899,
-    "image": "/products/p21.svg"
+    "image": assetPath("/products/p21.svg")
   },
   {
     "id": "p22",
@@ -196,7 +197,7 @@ export const PRODUCTS: Product[] = [
     "category": "饰品",
     "style": "松弛日常",
     "price": 529,
-    "image": "/products/p22.svg"
+    "image": assetPath("/products/p22.svg")
   },
   {
     "id": "p23",
@@ -205,7 +206,7 @@ export const PRODUCTS: Product[] = [
     "category": "饰品",
     "style": "复古街头",
     "price": 399,
-    "image": "/products/p23.svg"
+    "image": assetPath("/products/p23.svg")
   },
   {
     "id": "p24",
@@ -214,7 +215,7 @@ export const PRODUCTS: Product[] = [
     "category": "饰品",
     "style": "未来机能",
     "price": 299,
-    "image": "/products/p24.svg"
+    "image": assetPath("/products/p24.svg")
   }
 ];
 export const STYLES = ["松弛日常", "复古街头", "未来机能"] as const;
